@@ -1,38 +1,305 @@
-.App {
-  text-align: center;
+.bg {
+  background-Image: url("/images/ny2.jpg");
+  min-height: 40vh;
+  width:100%;
+  background-size: cover;
+  background-position: center center;
+  height: auto;
+  display: fixed;
+  border-bottom: 20px solid black;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#name p {
+  font-weight: 300; 
+  font-size: 25px;
+}
+#menu {
+  visibility: hidden;
+}
+#littleMenu {
+  visibility: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media only screen and (max-width: 1000px) {
+  #name p {
+    padding-top: 7px;
+    font-weight: 300; 
+    font-size: 20px;
   }
+  #menu {
+    padding-right: 12px;
+    padding-top: 20px;
+    visibility: visible;
+  }
+  #navigation a{
+  display: none  
+  }
+  #littleMenu {
+    visibility: visible;
+    display: block;
+    padding-top: 20px;
+    display: relative;
+  }
+  #littleMenu a{
+    display: block;
+    padding-bottom: 20px;
+    font-size: 20px;
+
+  }
+ 
+  #littleMenu a:hover {
+    border-bottom: 1px solid #fafafa;
+    display: inline-block;
+  
+  }
+
+}
+@media only screen and (max-width: 425px) {
+  #name {
+    font-weight: normal;
+    font-size: 15px;
+    padding-top: 40px;
+  }
+  
+}
+.circular--landscape {
+  display: inline-block;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 2px solid white;
 }
 
-.App-header {
-  background-color: #282c34;
+.circular--landscape img {
+  width: auto;
+  height: 190%;
+  margin-left: -30px;
+  margin-top: -30px;
+}
+
+i {
+  color: black;
+}
+
+i:hover  {
+  color: #d81b60;
+}
+
+
+#skills, #values {
+  padding-top: 120px;
+  margin-top: -120px;
+}
+
+.achomplishmentSection  {
+  padding-top: 20px;
+  background-color: #212121;
+}
+#firstgradient {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 90px 100vw 0 0;
+  border-color: #fafafa #212121  transparent transparent;
+  transform: scale(1.0001);
+}
+#secondgradient {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 90px 100vw 0 0;
+  border-color: #212121 #fafafa transparent transparent;
+  transform: scale(1.0001);
+}
+.ib {
+  display: inline-block
+}
+#chartArea {
+  padding-bottom: 50px;
+}
+#nav a {
+  text-decoration: none;
+  padding-bottom: 7px;
+
+}
+#navigation a:hover {
+  border-bottom: 3px solid #fafafa;
+
+}
+
+#about{
+  min-height: calc(100vh - 117px);
+}
+
+
+/* Grow */
+.hvr-grow {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+.hvr-grow:hover, .hvr-grow:focus, .hvr-grow:active {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+body {
   min-height: 100vh;
+}
+.projectArea {
+  min-height: 100vh;
+}
+
+/** Hover-related CSS **/
+.l > h4, .l > h1 {
+  position: relative;
+  color: #fafafa;
+  text-decoration: none;
+}
+
+.l > h4:hover, .l > h1:hover {
+  color: #fafafa;
+}
+
+.l > h4:before, .l > h1:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #fafafa;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.l > h4:hover:before, .l > h1:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+.d > h4, .d> h1 {
+  position: relative;
+  color: #212121;
+  text-decoration: none;
+}
+
+.d > h4:hover , .d> h1:hover {
+  color: #212121;
+}
+
+.d > h4:before, .d> h1:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #212121;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.d > h4:hover:before, .d> h1:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+/* Resume Button */
+
+.buttonContainer {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  background: #212121;
+  padding: 50px;
 }
 
-.App-link {
-  color: #61dafb;
+.buttonFancy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fcf3ec;
+}
+ .button {
+  --offset: 10px;
+  --border-size: 2px;
+  display: block;
+  position: relative;
+  padding: 1.5em 3em;
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: #fafafa;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  outline: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 0;
+  box-shadow: inset 0 0 0 var(--border-size) currentcolor;
+  transition: background 0.8s ease;
+}
+.button:hover {
+  background: rgba(100, 0, 0, .03);
+}
+.button__horizontal, .button__vertical {
+  position: absolute;
+  top: var(--horizontal-offset, 0);
+  right: var(--vertical-offset, 0);
+  bottom: var(--horizontal-offset, 0);
+  left: var(--vertical-offset, 0);
+  transition: transform 0.8s ease;
+  will-change: transform;
+}
+.button__horizontal::before, .button__vertical::before {
+  content: '';
+  position: absolute;
+  border: inherit;
+}
+.button__horizontal {
+  --vertical-offset: calc(var(--offset) * -1);
+  border-top: var(--border-size) solid currentcolor;
+  border-bottom: var(--border-size) solid currentcolor;
+}
+.button__horizontal::before {
+  top: calc(var(--vertical-offset) - var(--border-size));
+  bottom: calc(var(--vertical-offset) - var(--border-size));
+  left: calc(var(--vertical-offset) * -1);
+  right: calc(var(--vertical-offset) * -1);
+}
+.button:hover .button__horizontal {
+  transform: scaleX(0);
+}
+.button__vertical {
+  --horizontal-offset: calc(var(--offset) * -1);
+  border-left: var(--border-size) solid currentcolor;
+  border-right: var(--border-size) solid currentcolor;
+}
+.button__vertical::before {
+  top: calc(var(--horizontal-offset) * -1);
+  bottom: calc(var(--horizontal-offset) * -1);
+  left: calc(var(--horizontal-offset) - var(--border-size));
+  right: calc(var(--horizontal-offset) - var(--border-size));
+}
+.button:hover .button__vertical {
+  transform: scaleY(0);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
