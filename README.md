@@ -36,7 +36,7 @@ The versions of node and npm you currently have installed should appear. If you 
 7. Run the program by typing <b> yarn start </b>
 
 ## :rocket: Deployed Site: 
-https://jennifer-powell.io
+http://jennifer-powell.io
 
 ## :wrench: Technologies
 
