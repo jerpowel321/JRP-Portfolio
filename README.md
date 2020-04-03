@@ -29,12 +29,14 @@ The versions of node and npm you currently have installed should appear. If you 
 #### Clone the repository & Start the application
 1. Open Terminal
 2. Change the current working directory to the location where you want the cloned directory to be made.
-3. Type git clone https://github.com/jerpowel321/JP-Portfolio.git
+3. Type git clone https://github.com/jerpowel321/JRP-Portfolio.git
 4. Press Enter. Your local clone will be created.
 5. Navigate into the directory that you just cloned down 
 6. Type <b> npm i </b>  (this will install all dependencies)
 7. Run the program by typing <b> yarn start </b>
 
+## :rocket: Deployed Site: 
+jennifer-powell.io
 
 ## :wrench: Technologies
 
