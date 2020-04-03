@@ -17,14 +17,14 @@
 ## 🔑 How to Run the App
 
 #### Prerequisite
-1. Make sure you have Node and NPM (Node Package Manager) installed. 
+1. Make sure you have Node and Yarn (Javascript Package Manager) installed. 
     - You can use the following comands in terminal to check which version is installed 
 
 ```
 node -v  
-npm -v
+yarn -v
 ```
-The versions of node and npm you currently have installed should appear. If you don't have them installed, follow Node installation instructions located [here](https://nodejs.org/en/download/). NPM is distributed with Node.js- which means that when you download Node.js, you automatically get npm installed on your computer.
+The versions of node and yarn you currently have installed should appear. If you don't have them installed, follow Node installation instructions located [here](https://nodejs.org/en/download/) and Yarn installation instructions located [here](https://classic.yarnpkg.com/en/docs/install/#mac-stable). 
 
 #### Clone the repository & Start the application
 1. Open Terminal
