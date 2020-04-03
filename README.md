@@ -32,7 +32,7 @@ The versions of node and npm you currently have installed should appear. If you 
 3. Type git clone https://github.com/jerpowel321/JRP-Portfolio.git
 4. Press Enter. Your local clone will be created.
 5. Navigate into the directory that you just cloned down 
-6. Type <b> npm i </b>  (this will install all dependencies)
+6. Type <b> yarn install </b>  (this will install all dependencies)
 7. Run the program by typing <b> yarn start </b>
 
 ## :rocket: Deployed Site: 
