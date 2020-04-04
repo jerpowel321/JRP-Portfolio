@@ -37,7 +37,7 @@ const Footer = () => {
 			<a href="https://www.linkedin.com/in/jenniferrpowell/" target="_blank" rel="noopener noreferrer" className="hvr-grow">
 				<FontAwesomeIcon className={classes.i} icon={faLinkedinIn} size='2x' />
 			</a>
-			<a href="https://www.dropbox.com/s/jv0f7sp6eqj13v4/JP_Resume.pdf?dl=0" target="_blank" rel="noopener noreferrer" className="hvr-grow">
+			<a href="https://www.dropbox.com/s/dvx6ymfli11cprt/JP_Resume.pdf?dl=0" target="_blank" rel="noopener noreferrer" className="hvr-grow">
 				<FontAwesomeIcon className={classes.i} icon={faAdobe} size='2x' />
 			</a>
 			<a href="https://twitter.com/Jennpowpow" target="_blank" rel="noopener noreferrer" className="hvr-grow">

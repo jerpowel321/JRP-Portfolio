@@ -65,7 +65,7 @@ export default class NavBar extends React.Component {
 									<a href="https://www.linkedin.com/in/jenniferrpowell/" target="_blank" rel="noopener noreferrer">
 										<i className="fab fa-2x fa-linkedin hvr-grow" style={{ color: white, paddingRight: "12px" }}></i>
 									</a>
-									<a href="https://www.dropbox.com/s/jv0f7sp6eqj13v4/JP_Resume.pdf?dl=0" target="_blank" rel="noopener noreferrer">
+									<a href="https://www.dropbox.com/s/dvx6ymfli11cprt/JP_Resume.pdf?dl=0" target="_blank" rel="noopener noreferrer">
 										<i className="fas fa-file-pdf fa-2x ml hvr-grow nml" style={{ color: white, paddingRight: "12px" }}></i>
 									</a>
 								</Grid>
