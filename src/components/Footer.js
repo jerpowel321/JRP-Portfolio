@@ -3,11 +3,8 @@ import BottomNavigation from '@material-ui/core/BottomNavigation';
 import grey from '@material-ui/core/colors/grey';
 import { makeStyles } from '@material-ui/core/styles';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import { fab } from '@fortawesome/free-brands-svg-icons'
 import { faGithub, faTwitter, faInstagram, faAngellist, faYelp, faMediumM, faLinkedinIn, faAdobe } from '@fortawesome/free-brands-svg-icons'
-// import { faCoffee } from '@fortawesome/free-solid-svg-icons'
-// import { faTwitter } from '@fortawesome/free-solid-svg-icons'
-// import FontAwesome from '@react-fontawesome'
+
 const black = grey[900];
 const white = grey[50];
 
