@@ -12,7 +12,7 @@ const Project = (props) => {
 	return (
 		<div >
 			{props.project ? (
-				<Card id={props.project.fields.name} style={{ height: "550px" }} >
+				<Card className="cardWrap" id={props.project.fields.name} >
 					<CardMedia>
 						{props.project.fields.images !== undefined ? (
 							<div style={{ height: "180px", overflow: "hidden" }}>
@@ -30,33 +30,35 @@ const Project = (props) => {
 								{props.project.fields.name}
 							</Typography>
 						</div>
-						<div style={{ height: "120px", overflow: "hidden" }}>
+						<div style={{ height: "140px", overflow: "hidden" }}>
 							<Typography component="p">
 								{props.project.fields.description}
 							</Typography>
 						</div>
 						{props.project.fields.skills !== undefined ? (
-							<Typography style={{ height: "125px", overflow: "hidden" }} variant="body2">
-								<b style={{ display: "block", paddingTop: "5px" }} >Technical Skills: </b>
-								<span style={{ display: "flex", flexWrap: "wrap", margin: "0px" }}>
+							<div className="img__description">
+							<Typography variant="body2">
+								<b style={{ display: "block", padding: "5px 0px", fontSize: "18px" }} >Technical Skills: </b>
+								<span style={{ display: "flex", flexWrap: "wrap", margin: "0px", fontSize: "14px"}}>
 									{props.project.fields.skills.map(skill => (
 										<li key={skill} style={{ paddingRight: "15px" }} >{skill}</li>
 									))
 									}
 								</span>
 							</Typography>
+							</div>
 						) : null
 						}
 					</CardContent>
 					<CardActions style={{ display: "flex", padding: "15px" }} >
 						<Grid container justify="center" alignItems="center">
 							<Grid item>
-
-								<a href={props.project.fields.githubLink} target="_blank" rel="noopener noreferrer"><i style={{ marginRight: "7px" }} className="fab fa-2x fa-github hvr-grow"></i></a>
+								{props.project.fields.githubLink ? (
+									<a href={props.project.fields.githubLink} target="_blank" rel="noopener noreferrer"><i style={{ marginRight: "7px" }} className="fab fa-2x fa-github hvr-grow"></i></a>)
+								: null}
 								{props.project.fields.deployedSite ? (
 									<a href={props.project.fields.deployedSite} target="_blank" rel="noopener noreferrer"><i style={{ marginRight: "7px" }} className="fas fa-2x fa-rocket hvr-grow"></i></a>) : null
 								}
-								{/* <a ><i style={{ marginRight: "7px" }} className="fas fa-2x fa-plus-circle hvr-grow"></i></a> */}
 							</Grid>
 						</Grid>
 					</CardActions>
