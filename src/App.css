@@ -309,13 +309,14 @@ body {
   width: 340px;
 }
 
-.img__description {
+.technicalSkills {
   position: absolute;
+  height: 140px;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 80px 30px;
+  padding: 20px 30px;
   text-align: center;
   background: rgba(0, 0, 0, 0.8);
   color: #fff;
@@ -326,7 +327,7 @@ body {
   transition: opacity .2s, visibility .2s;
 }
 
-.cardWrap:hover .img__description {
+.cardWrap:hover .technicalSkills {
   visibility: visible;
   opacity: 1;
 }

@@ -36,7 +36,7 @@ const Project = (props) => {
 							</Typography>
 						</div>
 						{props.project.fields.skills !== undefined ? (
-							<div className="img__description">
+							<div className="technicalSkills">
 							<Typography variant="body2">
 								<b style={{ display: "block", padding: "5px 0px", fontSize: "18px" }} >Technical Skills: </b>
 								<span style={{ display: "flex", flexWrap: "wrap", margin: "0px", fontSize: "14px"}}>
