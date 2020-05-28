@@ -75,7 +75,7 @@ class App extends Component {
 								margin="normal"
 								onChange={this.onSearchInputChange} />
 						</div>
-						<Grid container spacing={10} style={{ padding: 24 }}>
+						<Grid container spacing={10} >
 							{this.state.projects.map(project => (
 								<Grid key={project.fields.name} item xs={12} sm={6} lg={4} xl={3}>
 									<Project project={project} onClick={this.onClick.bind(this)} />

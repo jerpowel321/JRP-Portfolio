@@ -12,7 +12,7 @@ const Project = (props) => {
 	return (
 		<div >
 			{props.project ? (
-				<Card className="cardWrap" id={props.project.fields.name} >
+				<Card className="cardWrap" id={props.project.fields.name} style={{margin: "auto"}}>
 					<CardMedia>
 						{props.project.fields.images !== undefined ? (
 							<div style={{ height: "180px", overflow: "hidden" }}>
