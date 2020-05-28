@@ -28,7 +28,7 @@
   }
   #menu {
     padding-right: 12px;
-    padding-top: 20px;
+    /* padding-top: 20px; */
     visibility: visible;
   }
   #navigation a{
@@ -37,12 +37,12 @@
   #littleMenu {
     visibility: visible;
     display: block;
-    padding-top: 20px;
+    /* padding-top: 20px; */
     display: relative;
   }
   #littleMenu a{
     display: block;
-    padding-bottom: 20px;
+    /* padding-bottom: 20px; */
     font-size: 20px;
 
   }
@@ -121,7 +121,7 @@ i:hover  {
 }
 #nav a {
   text-decoration: none;
-  padding-bottom: 7px;
+  /* padding-bottom: 7px; */
 
 }
 #navigation a:hover {
