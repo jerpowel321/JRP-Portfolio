@@ -28,7 +28,6 @@ const options = {
 			ticks: {
 				min: 0,
 				max: 10,
-				// display: false
 			}
 		}],
 		yAxes: [{
