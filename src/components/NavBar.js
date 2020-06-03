@@ -3,9 +3,42 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Grid from '@material-ui/core/Grid'
 import grey from '@material-ui/core/colors/grey';
+import { withStyles } from '@material-ui/styles';
 const white = grey[50];
 
-export default class NavBar extends React.Component {
+const styles = theme => ({
+	root: {
+		backgroundColor: "black" 
+	},
+	p: {
+		paddingRight: "30px", 
+		fontFamily: "Lato, sans-serif", 
+		color: "#FFFFFF" 
+	},
+	grid: {
+		paddingTop: "30px", 
+		paddingRight: "20px", 
+		color: white 
+	},
+	a: {
+		color: white 
+	},
+	i: {
+		color: white, 
+		paddingRight: "12px" 
+	},
+	a2: {
+		color: white, 
+		paddingBottom: "15px"
+	},
+	container: {
+		alignContent: "center", 
+		height:"78px"
+	}
+  
+  });
+
+  class NavBar extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -25,46 +58,47 @@ export default class NavBar extends React.Component {
 
 	}
 	render() {
+		const { classes } = this.props;
 		return (
-			<AppBar id="nav" style={{ backgroundColor: "black" }} position="sticky" >
+			<AppBar id="nav" classes={classes.root} position="sticky" >
 				<Toolbar>
 					<Grid container >
 						<Grid item xs={6}>
 							<Grid id="navigation" container justify="flex-start" style={{ fontWeight: "bold" }}>
 								<div id="name" >
-									<p style={{ paddingRight: "30px", fontFamily: "Lato, sans-serif", color: "#FFFFFF" }}>
+									<p classes={classes.p}>
 										Jennifer Powell
-              </p>
+              					</p>
 								</div>
-								<Grid item style={{ paddingTop: "30px", paddingRight: "20px", color: white }}>
-									<a style={{ color: white }} href="/about" rel="noopener noreferrer">About</a>
+								<Grid item classes={classes.grid}>
+									<a classes={classes.a} href="/about" rel="noopener noreferrer">About</a>
 								</Grid>
-								<Grid item style={{ paddingTop: "30px", paddingRight: "20px", color: white }}>
-									<a style={{ color: white }} href="/about/#values" rel="noopener noreferrer">Values</a>
+								<Grid item classes={classes.grid}>
+									<a classes={classes.a} href="/about/#values" rel="noopener noreferrer">Values</a>
 								</Grid>
-								<Grid item style={{ paddingTop: "30px", paddingRight: "20px", color: white }}>
-									<a style={{ color: white }} href="/about/#skills" rel="noopener noreferrer">Skills</a>
+								<Grid item classes={classes.grid}>
+									<a classes={classes.a} href="/about/#skills" rel="noopener noreferrer">Skills</a>
 								</Grid>
-								<Grid item style={{ paddingTop: "30px", paddingRight: "20px", color: white }}>
-									<a style={{ color: white }} href="/" rel="noopener noreferrer">Projects</a>
+								<Grid item classes={classes.grid}>
+									<a classes={classes.a} href="/" rel="noopener noreferrer">Projects</a>
 								</Grid>
 							</Grid>
 						</Grid>
 
 						<Grid item xs={6}>
-							<Grid container justify="flex-end" style={{alignContent: "center", height:"78px"}} >
-								<a id="menu" ><i className="fas fa-2x fa-bars" style={{ color: white }} onClick={this.menuClick}>
+							<Grid container justify="flex-end" classes={classes.container} >
+								<a id="menu" ><i className="fas fa-2x fa-bars" classes={classes.a} onClick={this.menuClick}>
 								</i>
 								</a>
 								<Grid item style={{  color: white,}}>
 									<a href="https://github.com/jerpowel321" target="_blank" rel="noopener noreferrer">
-										<i className="fab fa-2x fa-github hvr-grow" style={{ color: white, paddingRight: "12px" }}></i>
+										<i className="fab fa-2x fa-github hvr-grow" classes={classes.i}></i>
 									</a>
 									<a href="https://www.linkedin.com/in/jenniferrpowell/" target="_blank" rel="noopener noreferrer">
-										<i className="fab fa-2x fa-linkedin hvr-grow" style={{ color: white, paddingRight: "12px" }}></i>
+										<i className="fab fa-2x fa-linkedin hvr-grow" classes={classes.i}></i>
 									</a>
 									<a href="https://www.dropbox.com/s/dvx6ymfli11cprt/JP_Resume.pdf?dl=0" target="_blank" rel="noopener noreferrer">
-										<i className="fas fa-file-pdf fa-2x ml hvr-grow nml" style={{ color: white, paddingRight: "12px" }}></i>
+										<i className="fas fa-file-pdf fa-2x ml hvr-grow nml" classes={classes.i}></i>
 									</a>
 								</Grid>
 							</Grid>
@@ -72,10 +106,10 @@ export default class NavBar extends React.Component {
 								<Grid item style={{  }}>
 									{this.state.menuOpen ? (
 										<div id="littleMenu">
-											<a style={{ color: white, paddingBottom: "15px" }} href="/about" rel="noopener noreferrer">About</a>
-											<a style={{ color: white, paddingBottom: "15px" }} href="/about/#values" rel="noopener noreferrer">Values</a>
-											<a style={{ color: white, paddingBottom: "15px" }} href="/about/#skills" rel="noopener noreferrer">Skills</a>
-											<a style={{ color: white, paddingBottom: "15px"  }} href="/" rel="noopener noreferrer">Projects</a>
+											<a classes={classes.a2} href="/about" rel="noopener noreferrer">About</a>
+											<a classes={classes.a2} href="/about/#values" rel="noopener noreferrer">Values</a>
+											<a classes={classes.a2} href="/about/#skills" rel="noopener noreferrer">Skills</a>
+											<a classes={classes.a2} href="/" rel="noopener noreferrer">Projects</a>
 										</div>
 									) : null
 									}
@@ -91,3 +125,5 @@ export default class NavBar extends React.Component {
 };
 
 
+
+export default  NavBar
