@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import Grid from '@material-ui/core/Grid'
 import TextField from '@material-ui/core/TextField'
-// import * as contentful from 'contentful'
 import Project from '../components/Project'
 import { createClient } from "contentful";
 import SearchIcon from '@material-ui/icons/Search';
