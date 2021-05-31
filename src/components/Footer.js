@@ -3,7 +3,7 @@ import BottomNavigation from '@material-ui/core/BottomNavigation';
 import grey from '@material-ui/core/colors/grey';
 import { makeStyles } from '@material-ui/core/styles';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub, faTwitter, faInstagram, faAngellist, faYelp, faMediumM, faLinkedinIn, faAdobe } from '@fortawesome/free-brands-svg-icons'
+import { faGithub, faTwitter, faInstagram, faAngellist, faYelp, faMediumM, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 
 const black = grey[900];
 const white = grey[50];
@@ -33,9 +33,6 @@ const Footer = () => {
 			</a>
 			<a href="https://www.linkedin.com/in/jenniferrpowell/" target="_blank" rel="noopener noreferrer" className="hvr-grow">
 				<FontAwesomeIcon className={classes.i} icon={faLinkedinIn} size='2x' />
-			</a>
-			<a href="https://www.dropbox.com/s/dvx6ymfli11cprt/JP_Resume.pdf?dl=0" target="_blank" rel="noopener noreferrer" className="hvr-grow">
-				<FontAwesomeIcon className={classes.i} icon={faAdobe} size='2x' />
 			</a>
 			<a href="https://twitter.com/Jennpowpow" target="_blank" rel="noopener noreferrer" className="hvr-grow">
 				<FontAwesomeIcon className={classes.i} icon={faTwitter} size='2x' />
