@@ -1,7 +1,7 @@
 .bg {
-  background-Image: url("/images/ny2.jpg");
+  background-image: url("/images/ny2.jpg");
   min-height: 40vh;
-  width:100%;
+  width: 100%;
   background-size: cover;
   background-position: center center;
   height: auto;
@@ -9,9 +9,8 @@
   border-bottom: 20px solid black;
 }
 
-#name p {
-  font-weight: 300; 
-  font-size: 25px;
+#name image {
+  width: 200px;
 }
 #menu {
   visibility: hidden;
@@ -23,41 +22,35 @@
 @media only screen and (max-width: 1000px) {
   #name p {
     padding-top: 7px;
-    font-weight: 300; 
+    font-weight: 300;
     font-size: 20px;
   }
   #menu {
     padding-right: 12px;
     visibility: visible;
   }
-  #navigation a{
-  display: none  
+  #navigation a {
+    display: none;
   }
   #littleMenu {
     visibility: visible;
     display: block;
     display: relative;
   }
-  #littleMenu a{
+  #littleMenu a {
     display: block;
     font-size: 20px;
-
   }
- 
+
   #littleMenu a:hover {
     border-bottom: 1px solid #fafafa;
     display: inline-block;
-  
   }
-
 }
 @media only screen and (max-width: 425px) {
-  #name {
-    font-weight: normal;
-    font-size: 15px;
-    padding-top: 40px;
+  .hideOnMobile {
+    display: none;
   }
-  
 }
 .circular--landscape {
   display: inline-block;
@@ -80,17 +73,17 @@ i {
   color: black;
 }
 
-i:hover  {
+i:hover {
   color: #d81b60;
 }
 
-
-#skills, #values {
+#skills,
+#values {
   padding-top: 120px;
   margin-top: -120px;
 }
 
-.achomplishmentSection  {
+.achomplishmentSection {
   padding-top: 20px;
   background-color: #212121;
 }
@@ -99,7 +92,7 @@ i:hover  {
   height: 0;
   border-style: solid;
   border-width: 90px 100vw 0 0;
-  border-color: #fafafa #212121  transparent transparent;
+  border-color: #fafafa #212121 transparent transparent;
   transform: scale(1.0001);
 }
 #secondgradient {
@@ -111,7 +104,7 @@ i:hover  {
   transform: scale(1.0001);
 }
 .ib {
-  display: inline-block
+  display: inline-block;
 }
 #chartArea {
   padding-bottom: 50px;
@@ -119,17 +112,14 @@ i:hover  {
 #nav a {
   text-decoration: none;
   /* padding-bottom: 7px; */
-
 }
 #navigation a:hover {
   border-bottom: 3px solid #fafafa;
-
 }
 
-#about{
+#about {
   min-height: calc(100vh - 117px);
 }
-
 
 /* Grow */
 .hvr-grow {
@@ -143,7 +133,9 @@ i:hover  {
   -webkit-transition-property: transform;
   transition-property: transform;
 }
-.hvr-grow:hover, .hvr-grow:focus, .hvr-grow:active {
+.hvr-grow:hover,
+.hvr-grow:focus,
+.hvr-grow:active {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
 }
@@ -156,17 +148,20 @@ body {
 }
 
 /** Hover-related CSS **/
-.l > h4, .l > h1 {
+.l > h4,
+.l > h1 {
   position: relative;
   color: #fafafa;
   text-decoration: none;
 }
 
-.l > h4:hover, .l > h1:hover {
+.l > h4:hover,
+.l > h1:hover {
   color: #fafafa;
 }
 
-.l > h4:before, .l > h1:before {
+.l > h4:before,
+.l > h1:before {
   content: "";
   position: absolute;
   width: 100%;
@@ -181,23 +176,27 @@ body {
   transition: all 0.3s ease-in-out 0s;
 }
 
-.l > h4:hover:before, .l > h1:hover:before {
+.l > h4:hover:before,
+.l > h1:hover:before {
   visibility: visible;
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
 }
 
-.d > h4, .d> h1 {
+.d > h4,
+.d > h1 {
   position: relative;
   color: #212121;
   text-decoration: none;
 }
 
-.d > h4:hover , .d> h1:hover {
+.d > h4:hover,
+.d > h1:hover {
   color: #212121;
 }
 
-.d > h4:before, .d> h1:before {
+.d > h4:before,
+.d > h1:before {
   content: "";
   position: absolute;
   width: 100%;
@@ -212,7 +211,8 @@ body {
   transition: all 0.3s ease-in-out 0s;
 }
 
-.d > h4:hover:before, .d> h1:hover:before {
+.d > h4:hover:before,
+.d > h1:hover:before {
   visibility: visible;
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
@@ -234,7 +234,7 @@ body {
   align-items: center;
   background: #fcf3ec;
 }
- .button {
+.button {
   --offset: 10px;
   --border-size: 2px;
   display: block;
@@ -254,9 +254,10 @@ body {
   transition: background 0.8s ease;
 }
 .button:hover {
-  background: rgba(100, 0, 0, .03);
+  background: rgba(100, 0, 0, 0.03);
 }
-.button__horizontal, .button__vertical {
+.button__horizontal,
+.button__vertical {
   position: absolute;
   top: var(--horizontal-offset, 0);
   right: var(--vertical-offset, 0);
@@ -265,8 +266,9 @@ body {
   transition: transform 0.8s ease;
   will-change: transform;
 }
-.button__horizontal::before, .button__vertical::before {
-  content: '';
+.button__horizontal::before,
+.button__vertical::before {
+  content: "";
   position: absolute;
   border: inherit;
 }
@@ -299,7 +301,6 @@ body {
   transform: scaleY(0);
 }
 
-
 .cardWrap {
   position: relative;
   height: 450px;
@@ -321,7 +322,7 @@ body {
   opacity: 0;
 
   /* transition effect. not necessary */
-  transition: opacity .2s, visibility .2s;
+  transition: opacity 0.2s, visibility 0.2s;
 }
 
 .cardWrap:hover .technicalSkills {
