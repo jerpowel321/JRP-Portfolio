@@ -62,30 +62,42 @@ class App extends Component {
 	}
 	render() {
 		return (
-			<div style={{ paddingBottom: "50px" }}>
-
-				{this.state.projects ? (
-					<div>
-						<div>
-							<SearchIcon style={{ paddingTop: 40, }} />
-							<TextField style={{ padding: 24, }}
-								id="searchInput"
-								placeholder="Search for skills"
-								margin="normal"
-								onChange={this.onSearchInputChange} />
-						</div>
-						<Grid container spacing={10} >
-							{this.state.projects.map(project => (
-								<Grid key={project.fields.name} item xs={12} sm={6} lg={4} xl={3}>
-									<Project project={project} onClick={this.onClick.bind(this)} />
-								</Grid>
-							))}
-						</Grid>
-					</div>
-				) : "No project found"
-				}
-			</div>
-		)
+      <div style={{ paddingBottom: "50px" }}>
+        {this.state.projects ? (
+          <div>
+            <div>
+              <SearchIcon style={{ paddingTop: 40 }} />
+              <TextField
+                style={{ padding: 24 }}
+                id="searchInput"
+                placeholder="Search for skills"
+                margin="normal"
+                onChange={this.onSearchInputChange}
+              />
+            </div>
+            <Grid container spacing={{ xs: 4, md: 2 }}>
+              {this.state.projects.map((project) => (
+                <Grid
+                  key={project.fields.name}
+                  item
+                  xs={12}
+                  sm={6}
+                  lg={4}
+                  xl={3}
+                >
+                  <Project
+                    project={project}
+                    onClick={this.onClick.bind(this)}
+                  />
+                </Grid>
+              ))}
+            </Grid>
+          </div>
+        ) : (
+          "No project found"
+        )}
+      </div>
+    );
 	}
 }
 

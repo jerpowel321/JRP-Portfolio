@@ -30,7 +30,7 @@ export default class NavBar extends React.Component {
       <AppBar id="nav" style={{ backgroundColor: "black" }} position="sticky">
         <Toolbar>
           <Grid container>
-            <Grid item xs={7} style={{ alignSelf: "center" }} className="hideOnMobile">
+            <Grid item xs={7} style={{ alignSelf: "center" }}>
               <Grid
                 id="navigation"
                 container
@@ -94,6 +94,7 @@ export default class NavBar extends React.Component {
                     href="https://github.com/jerpowel321"
                     target="_blank"
                     rel="noopener noreferrer"
+                    className="hideOnMobile"
                   >
                     <i
                       className="fab fa-2x fa-github hvr-grow"
@@ -104,6 +105,7 @@ export default class NavBar extends React.Component {
                     href="https://www.linkedin.com/in/jenniferrpowell/"
                     target="_blank"
                     rel="noopener noreferrer"
+                    className="hideOnMobile"
                   >
                     <i
                       className="fab fa-2x fa-linkedin hvr-grow"
@@ -114,6 +116,7 @@ export default class NavBar extends React.Component {
                     href="/images/JenniferPowell_Resume.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
+                    className="hideOnMobile"
                   >
                     <i
                       className="fas fa-file-pdf fa-2x ml hvr-grow nml"
@@ -132,12 +135,12 @@ export default class NavBar extends React.Component {
             </Grid>
           </Grid>
         </Toolbar>
-        <Grid container style={{justifyContent: "center"}}>
+        <Grid container style={{ justifyContent: "center" }}>
           <Grid item style={{}}>
             {this.state.menuOpen ? (
               <div id="littleMenu">
                 <a
-                  style={{color: white, marginBottom: "15px" }}
+                  style={{ color: white, marginBottom: "15px" }}
                   href="/about"
                   rel="noopener noreferrer"
                 >
