@@ -36,7 +36,7 @@ The versions of node and yarn you currently have installed should appear. If you
 7. Run the program by typing <b> yarn start </b>
 
 ## :rocket: Deployed Site: 
-http://jennifer-powell.io
+http://jennifer-powell.com
 
 ## :wrench: Technologies
 

@@ -68,7 +68,7 @@ export default class NavBar extends React.Component {
               >
                 <div id="name" style={{ marginRight: "20px" }}>
                   <img
-                    src="./images/turtle-logo.png"
+                    src="/images/turtle-logo.png"
                     alt="Turtle"
                     width="60px"
                   />
