@@ -55,7 +55,7 @@ export default class NavBar extends React.Component {
       },
     ];
 		return (
-      <AppBar id="nav" style={{ backgroundColor: "black" }} position="sticky">
+      <AppBar id="nav" style={{ backgroundColor: "transparent" }} position="sticky">
         <Toolbar>
           <Grid container>
             <Grid item xs={7} style={{ alignSelf: "center" }}>

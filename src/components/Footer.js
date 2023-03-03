@@ -27,30 +27,66 @@ const useStyles = makeStyles(theme => ({
 const Footer = () => {
 	const classes = useStyles();
 	return (
-		<BottomNavigation className={classes.root}>
-			<a href="https://github.com/jerpowel321" target="_blank" rel="noopener noreferrer" className="hvr-grow">
-				<FontAwesomeIcon className={classes.i} icon={faGithub} size='2x' />
-			</a>
-			<a href="https://www.linkedin.com/in/jenniferrpowell/" target="_blank" rel="noopener noreferrer" className="hvr-grow">
-				<FontAwesomeIcon className={classes.i} icon={faLinkedinIn} size='2x' />
-			</a>
-			<a href="https://twitter.com/Jennpowpow" target="_blank" rel="noopener noreferrer" className="hvr-grow">
-				<FontAwesomeIcon className={classes.i} icon={faTwitter} size='2x' />
-			</a>
-			<a href="https://www.instagram.com/jennpowell321/" target="_blank" rel="noopener noreferrer" className="hvr-grow">
-				<FontAwesomeIcon className={classes.i} icon={faInstagram} size='2x' />
-			</a>
-			<a href="https://angel.co/jennifer-powell-10" target="_blank" rel="noopener noreferrer" className="hvr-grow">
-				<FontAwesomeIcon className={classes.i} icon={faAngellist} size='2x' />
-			</a>
-			<a href="https://jennpowell.yelp.com" target="_blank" rel="noopener noreferrer" className="hvr-grow">
-				<FontAwesomeIcon className={classes.i} icon={faYelp} size='2x' />
-			</a>
-			<a href="https://medium.com/@jerpowel321" target="_blank" rel="noopener noreferrer" className="hvr-grow">
-				<FontAwesomeIcon className={classes.i} icon={faMediumM} size='2x' />
-			</a>
-		</BottomNavigation>
-	)
+    <BottomNavigation className={classes.root}>
+      {/* <a
+        href="https://github.com/jerpowel321"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hvr-grow"
+      >
+        <FontAwesomeIcon className={classes.i} icon={faGithub} size="2x" />
+      </a>
+      <a
+        href="https://www.linkedin.com/in/jenniferrpowell/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hvr-grow"
+      >
+        <FontAwesomeIcon className={classes.i} icon={faLinkedinIn} size="2x" />
+      </a>
+      <a
+        href="https://twitter.com/Jennpowpow"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hvr-grow"
+      >
+        <FontAwesomeIcon className={classes.i} icon={faTwitter} size="2x" />
+      </a>
+      <a
+        href="https://www.instagram.com/jennpowell321/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hvr-grow"
+      >
+        <FontAwesomeIcon className={classes.i} icon={faInstagram} size="2x" />
+      </a>
+      <a
+        href="https://angel.co/jennifer-powell-10"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hvr-grow"
+      >
+        <FontAwesomeIcon className={classes.i} icon={faAngellist} size="2x" />
+      </a>
+      <a
+        href="https://jennpowell.yelp.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hvr-grow"
+      >
+        <FontAwesomeIcon className={classes.i} icon={faYelp} size="2x" />
+      </a>
+      <a
+        href="https://medium.com/@jerpowel321"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hvr-grow"
+      >
+        <FontAwesomeIcon className={classes.i} icon={faMediumM} size="2x" />
+      </a> */}
+      <p>Let's make something amazing together.</p>
+    </BottomNavigation>
+  );
 }
 
 export default Footer;

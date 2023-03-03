@@ -49,11 +49,26 @@ export const Header = styled.h1`
   margin: 0px;
 `;
 
+export const SecondaryHeader = styled.h4`
+  font-family: "Open Sans";
+  font-size: 40px;
+  color: #fff5fd;
+  font-weight: 600;
+`;
+
+export const SubHeader = styled.p`
+  font-family: "Open Sans";
+  font-size: 35px;
+  color: #fff5fd;
+  margin: 0px;
+`;
+
 export const PinkSubHeader = styled.p`
   font-family: "Open Sans";
   font-size: 35px;
   color: #fa6591;
   font-weight: 600;
+  margin: 0px;
 `;
 
 export const Text = styled.p`
@@ -62,4 +77,11 @@ export const Text = styled.p`
   width: 700px;
   color: white;
   font-weight: 400;
+`;
+
+export const SmallText = styled.p`
+  font-family: "Open Sans";
+  font-size: 26px;
+  color: #FFF5FD;
+  margin: 0px;
 `;

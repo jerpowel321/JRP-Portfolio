@@ -5,6 +5,9 @@ import ProjectList from '../components/ProjectList'
 import Footer from "../components/Footer"
 import Hero from "../components/Hero";
 import About from "../components/About";
+import Skills from "../components/Skills";
+import Experience from "../components/Experience";
+import Projects from "../components/LatestProjects";
 
 import styled from "styled-components";
 
@@ -18,7 +21,9 @@ class Portfolio extends Component {
         <Container>
           <Hero />
           <About />
-
+          <Skills />
+          <Experience />
+          <Projects />
           <div className="projectArea">
             <ProjectList />
           </div>
