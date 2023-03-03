@@ -18,7 +18,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <Router>
         <Route exact path="/" component={Portfolio} />
-        <Route exact path="/about" component={About} />
+        {/* <Route exact path="/about" component={About} /> */}
       </Router>
     </ThemeProvider>
   );

@@ -24,8 +24,36 @@ export default class NavBar extends React.Component {
 				menuOpen: true
 			})
 
-	}
-	render() {
+  }
+
+
+  render() {
+    const Links = [
+      {
+        link: "/",
+        text: "Home",
+      },
+      {
+        link: "/#about",
+        text: "About",
+      },
+      {
+        link: "/#skills",
+        text: "Skills",
+      },
+      {
+        link: "/#experience",
+        text: "Experience",
+      },
+      {
+        link: "/#projects",
+        text: "Products",
+      },
+      {
+        link: "/#contact",
+        text: "Contact",
+      },
+    ];
 		return (
       <AppBar id="nav" style={{ backgroundColor: "black" }} position="sticky">
         <Toolbar>
@@ -34,7 +62,7 @@ export default class NavBar extends React.Component {
               <Grid
                 id="navigation"
                 container
-                justify="flex-start"
+                justify="space-between"
                 alignItems="center"
                 style={{ fontWeight: "bold" }}
               >
@@ -42,45 +70,22 @@ export default class NavBar extends React.Component {
                   <img
                     src="./images/turtle-logo.png"
                     alt="Turtle"
-                    width="200px"
+                    width="60px"
                   />
                 </div>
+                <div style={{ display: 'flex', justifyContent: 'center'}}>
+                  {Links.map((link)=> 
                 <Grid item style={{ paddingRight: "20px", color: white }}>
-                  <a
-                    style={{ color: white }}
-                    href="/about"
-                    rel="noopener noreferrer"
-                  >
-                    About
-                  </a>
-                </Grid>
-                <Grid item style={{ paddingRight: "20px", color: white }}>
-                  <a
-                    style={{ color: white }}
-                    href="/about/#values"
-                    rel="noopener noreferrer"
-                  >
-                    Values
-                  </a>
-                </Grid>
-                <Grid item style={{ paddingRight: "20px", color: white }}>
-                  <a
-                    style={{ color: white }}
-                    href="/about/#skills"
-                    rel="noopener noreferrer"
-                  >
-                    Skills
-                  </a>
-                </Grid>
-                <Grid item style={{ paddingRight: "20px", color: white }}>
-                  <a
-                    style={{ color: white }}
-                    href="/"
-                    rel="noopener noreferrer"
-                  >
-                    Projects
-                  </a>
-                </Grid>
+                    <a
+                      style={{ color: white }}
+                      href={link.link}
+                      rel="noopener noreferrer"
+                    >
+                      {link.text}
+                    </a>
+                  </Grid>
+                  )}
+                </div>
               </Grid>
             </Grid>
             <Grid item xs={5}>
@@ -135,42 +140,6 @@ export default class NavBar extends React.Component {
             </Grid>
           </Grid>
         </Toolbar>
-        <Grid container style={{ justifyContent: "center" }}>
-          <Grid item style={{}}>
-            {this.state.menuOpen ? (
-              <div id="littleMenu">
-                <a
-                  style={{ color: white, marginBottom: "15px" }}
-                  href="/about"
-                  rel="noopener noreferrer"
-                >
-                  About
-                </a>
-                <a
-                  style={{ color: white, marginBottom: "15px" }}
-                  href="/about/#values"
-                  rel="noopener noreferrer"
-                >
-                  Values
-                </a>
-                <a
-                  style={{ color: white, marginBottom: "15px" }}
-                  href="/about/#skills"
-                  rel="noopener noreferrer"
-                >
-                  Skills
-                </a>
-                <a
-                  style={{ color: white, marginBottom: "15px" }}
-                  href="/"
-                  rel="noopener noreferrer"
-                >
-                  Projects
-                </a>
-              </div>
-            ) : null}
-          </Grid>
-        </Grid>
       </AppBar>
     );
 	}

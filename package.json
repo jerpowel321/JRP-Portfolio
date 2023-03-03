@@ -22,6 +22,7 @@
     "react-fontawesome": "^1.7.1",
     "react-router-dom": "^5.1.2",
     "react-scripts": "^3.4.1",
+    "styled-components": "^5.3.8",
     "typeface-roboto": "^0.0.75"
   },
   "scripts": {
