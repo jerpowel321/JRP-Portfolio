@@ -23,7 +23,7 @@ class About extends Component {
             <Header>About Me</Header>
             <PinkSubHeader>I'm a Frontend Engineer</PinkSubHeader>
             <Text>
-              Highly motivated Software Engineer seeking roles with tremendous
+              Highly motivated Software Engineer seeking roles with tremendous{" "}
               <b>
                 learning and growth opportunities while making a positive social
                 impact
@@ -37,7 +37,7 @@ class About extends Component {
         </Container>
         <Container>
           <Column>
-            <SecondaryHeader>My Accomplishment</SecondaryHeader>
+            <SecondaryHeader>Accomplishments</SecondaryHeader>
             {ACCOMPLISHMENTS.map((accomplishment) => (
               <Flexbox>
                 <ImageContainer>

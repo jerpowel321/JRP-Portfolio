@@ -33,22 +33,6 @@
     display: none;
   }
 }
-.circular--landscape {
-  display: inline-block;
-  position: relative;
-  width: 200px;
-  height: 200px;
-  overflow: hidden;
-  border-radius: 50%;
-  border: 2px solid white;
-}
-
-.circular--landscape img {
-  width: auto;
-  height: 190%;
-  margin-left: -30px;
-  margin-top: -30px;
-}
 
 i {
   color: black;
@@ -64,42 +48,16 @@ i:hover {
   margin-top: -120px;
 }
 
-.achomplishmentSection {
-  padding-top: 20px;
-  background-color: #212121;
-}
-#firstgradient {
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 90px 100vw 0 0;
-  border-color: #fafafa #212121 transparent transparent;
-  transform: scale(1.0001);
-}
-#secondgradient {
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 90px 100vw 0 0;
-  border-color: #212121 #fafafa transparent transparent;
-  transform: scale(1.0001);
-}
 .ib {
   display: inline-block;
 }
-#chartArea {
-  padding-bottom: 50px;
-}
+
 #nav a {
   text-decoration: none;
   /* padding-bottom: 7px; */
 }
 #navigation a:hover {
   border-bottom: 3px solid #fafafa;
-}
-
-#about {
-  min-height: calc(100vh - 117px);
 }
 
 /* Grow */
@@ -122,9 +80,6 @@ i:hover {
 }
 
 body {
-  min-height: 100vh;
-}
-.projectArea {
   min-height: 100vh;
 }
 

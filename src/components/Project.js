@@ -8,19 +8,19 @@ import Grid from '@material-ui/core/Grid';
 
 
 const Project = (props) => {
-
+  const { name, images, description, skills, githubLink } =
+    props.project.fields
 	return (
     <div>
-      {props.project && (
+      {props && (
         <Card
           className="cardWrap"
-          id={props.project.fields.name}
+          id={name}
           style={{ margin: "auto" , marginBottom: "40px"}}
         >
           <CardMedia>
-            {props.project.fields.images !== undefined && (
               <div className="projectImageContainer">
-                {props.project.fields.images.map((image) => (
+                {images.map((image) => (
                   <img
                     key={image.fields.file.title}
                     style={{ width: "100%" }}
@@ -29,20 +29,18 @@ const Project = (props) => {
                   />
                 ))}
               </div>
-            )}
           </CardMedia>
           <CardContent style={{ paddingBottom: "0px" }}>
             <div style={{ height: "35px", overflow: "hidden" }}>
               <Typography gutterBottom variant="h6" component="h6">
-                {props.project.fields.name}
+                {name}
               </Typography>
             </div>
             <div style={{ height: "140px", overflow: "hidden" }}>
               <Typography component="p">
-                {props.project.fields.description}
+                {description}
               </Typography>
             </div>
-            {props.project.fields.skills !== undefined && (
               <div className="technicalSkills">
                 <Typography variant="body2">
                   <b
@@ -62,7 +60,7 @@ const Project = (props) => {
                       fontSize: "14px",
                     }}
                   >
-                    {props.project.fields.skills.map((skill) => (
+                    {skills.map((skill) => (
                       <li key={skill} style={{ paddingRight: "15px" }}>
                         {skill}
                       </li>
@@ -70,32 +68,19 @@ const Project = (props) => {
                   </span>
                 </Typography>
               </div>
-            )}
           </CardContent>
           <CardActions style={{ display: "flex", padding: "15px" }}>
             <Grid container justify="center" alignItems="center">
               <Grid item>
-                {props.project.fields.githubLink && (
+                {githubLink && (
                   <a
-                    href={props.project.fields.githubLink}
+                    href={githubLink}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <i
                       style={{ marginRight: "7px" }}
                       className="fab fa-2x fa-github hvr-grow"
-                    ></i>
-                  </a>
-                )}
-                {props.project.fields.deployedSite && (
-                  <a
-                    href={props.project.fields.deployedSite}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <i
-                      style={{ marginRight: "7px" }}
-                      className="fas fa-2x fa-rocket hvr-grow"
                     ></i>
                   </a>
                 )}

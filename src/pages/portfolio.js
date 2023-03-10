@@ -1,15 +1,14 @@
 import React, { Component } from "react";
 import NavBar from "../components/NavBar";
-import ProjectList from '../components/ProjectList'
-// import Container from '@material-ui/core/Container'
+import ProjectSlider from '../components/ProjectSlider'
 import Footer from "../components/Footer"
 import Hero from "../components/Hero";
 import About from "../components/About";
 import Skills from "../components/Skills";
 import Experience from "../components/Experience";
-import Projects from "../components/LatestProjects";
-
+import { Header } from "../styles/global-styles";
 import styled from "styled-components";
+import Values from "../components/Values";
 
 class Portfolio extends Component {
 
@@ -21,13 +20,16 @@ class Portfolio extends Component {
         <Container>
           <Hero />
           <About />
-          <Skills />
-          <Experience />
-          <Projects />
-          <div className="projectArea">
-            <ProjectList />
-          </div>
         </Container>
+        <Skills />
+        <Container>
+          <Experience />
+          <Container>
+            <Header>Old Projects</Header>
+          </Container>
+          <ProjectSlider />
+        </Container>
+        <Values />
         <Footer />
       </div>
     );

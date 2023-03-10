@@ -11,7 +11,7 @@ class Skills extends Component {
     return (
     <Container>
         <Header>My Skills</Header>
-          <img src="/images/word-cloud.png" alt="Me" width="700px" />
+          <img src="/images/word-cloud.png" alt="Me" width="100%" />
         </Container>
     );
   }

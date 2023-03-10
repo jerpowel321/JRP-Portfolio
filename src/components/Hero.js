@@ -9,9 +9,9 @@ class About extends Component {
           <Header>Hey! I'm</Header>
           <Header>Jennifer Powell</Header>
           <Text>
-            Frontend focused software engineer with over two years of
-            experience. Enjoys working with designers and creative agents to
-            ideate and implement user friendly webpages and apps.
+            Frontend focused software engineer with over three years of
+            experience. I enjoy working cross functionally to
+            ideate and implement user friendly webpages, apps and projects.
           </Text>
           <img src="/images/lets-talk.png" alt="Let's Talk" width="200" />
         </div>
