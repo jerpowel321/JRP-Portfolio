@@ -9,10 +9,10 @@ import {
 class Skills extends Component {
   render() {
     return (
-    <Container>
+      <Container id="skills">
         <Header>My Skills</Header>
-          <img src="/images/word-cloud.png" alt="Me" width="100%" />
-        </Container>
+        <img src="/images/word-cloud.png" alt="Me" width="100%" />
+      </Container>
     );
   }
 }

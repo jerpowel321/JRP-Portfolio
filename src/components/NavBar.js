@@ -12,18 +12,13 @@ export default class NavBar extends React.Component {
 		this.state = {
 			menuOpen: false
 		};
-	}
-	menuClick = () => {
-		if (this.state.menuOpen === true) {
+  }
+  
+  menuClick = () => {
+    const {menuOpen} = this.state
 			this.setState({
-				menuOpen: false
-			})
-		}
-		else
-			this.setState({
-				menuOpen: true
-			})
-
+        menuOpen: !menuOpen,
+      });
   }
 
 
@@ -58,7 +53,7 @@ export default class NavBar extends React.Component {
       <AppBar id="nav" style={{ backgroundColor: "transparent" }} position="sticky">
         <Toolbar>
           <Grid container>
-            <Grid item xs={7} style={{ alignSelf: "center" }}>
+            <Grid item xs={8} style={{ alignSelf: "center" }}>
               <Grid
                 id="navigation"
                 container
@@ -88,7 +83,7 @@ export default class NavBar extends React.Component {
                 </div>
               </Grid>
             </Grid>
-            <Grid item xs={5}>
+            <Grid item xs={4}>
               <Grid
                 container
                 justify="flex-end"

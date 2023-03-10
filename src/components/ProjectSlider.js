@@ -14,6 +14,36 @@ const client = createClient({
 	accessToken: ACCESS_TOKEN
 });
 
+function NextArrow(props) {
+  const { onClick } = props;
+  return (
+    <div
+      className="slick-arrow"
+      // style={{
+      //   position: "absolute",
+      //   bottom: -40,
+      //   left: "52%",
+      //   pointer: "cursor",
+      // }}
+      onClick={onClick}
+    >
+      <img src="/images/right-arrow.png" alt="arrow_right" width="40px" />
+    </div>
+  );
+}
+
+function PrevArrow(props) {
+  const { onClick } = props;
+  return (
+    <div
+      className="slick-arrow"
+      // style={{position: 'absolute', bottom: -40, left: '45%', pointer: 'cursor'}}
+      onClick={onClick}
+    >
+      <img src="/images/left-arrow.png" alt="arrow_left" width="40px" />
+    </div>
+  );
+}
 const settings = {
   dots: true,
   infinite: true,
@@ -21,6 +51,8 @@ const settings = {
   slidesToScroll: 1,
   autoplay: true,
   autoplaySpeed: 2000,
+  nextArrow: <NextArrow />,
+  prevArrow: <PrevArrow />,
 };
 class ProjectSlider extends Component {
 	constructor() {
@@ -69,7 +101,7 @@ class ProjectSlider extends Component {
 
   render() {
 		return (
-      <div style={{ paddingBottom: "50px" }}>
+      <div style={{ paddingBottom: "50px", display: "relative" }}>
         <Helmet>
           <link
             rel="stylesheet"

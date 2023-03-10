@@ -8,11 +8,8 @@ import Skills from "../components/Skills";
 import Experience from "../components/Experience";
 import { Header } from "../styles/global-styles";
 import styled from "styled-components";
-import Values from "../components/Values";
 
 class Portfolio extends Component {
-
-
 	render() {
 		return (
       <div className="bg">
@@ -29,7 +26,6 @@ class Portfolio extends Component {
           </Container>
           <ProjectSlider />
         </Container>
-        <Values />
         <Footer />
       </div>
     );

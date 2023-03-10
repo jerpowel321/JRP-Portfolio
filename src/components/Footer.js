@@ -1,68 +1,53 @@
 import React from 'react';
-import BottomNavigation from '@material-ui/core/BottomNavigation';
-import grey from '@material-ui/core/colors/grey';
-import { makeStyles } from '@material-ui/core/styles';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub, faAngellist, faMediumM, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
+import { CONTACT } from '../utils/constants'
+import styled from "styled-components";
 
-const black = grey[900];
-const white = grey[50];
+import {
+  Header,
+  PinkSubHeader,
+  Text,
+  SecondaryHeader,
+  SubHeader,
+  SmallText,
+} from "../styles/global-styles";
 
-const useStyles = makeStyles(theme => ({
-	root: {
-		backgroundColor: black,
-		height: "100px",
-		bottom: "0",
-		width: "100%"
-	},
-	i: {
-		color: white,
-		paddingRight: "10px",
-		paddingTop: "30px",
-	}
-})
-);
 
 
 const Footer = () => {
-	const classes = useStyles();
 	return (
-    <BottomNavigation className={classes.root}>
-      {/* <a
-        href="https://github.com/jerpowel321"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="hvr-grow"
-      >
-        <FontAwesomeIcon className={classes.i} icon={faGithub} size="2x" />
-      </a>
-      <a
-        href="https://www.linkedin.com/in/jenniferrpowell/"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="hvr-grow"
-      >
-        <FontAwesomeIcon className={classes.i} icon={faLinkedinIn} size="2x" />
-      </a>
-      <a
-        href="https://angel.co/jennifer-powell-10"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="hvr-grow"
-      >
-        <FontAwesomeIcon className={classes.i} icon={faAngellist} size="2x" />
-      </a>
-      <a
-        href="https://medium.com/@jerpowel321"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="hvr-grow"
-      >
-        <FontAwesomeIcon className={classes.i} icon={faMediumM} size="2x" />
-      </a> */}
-      <p>Let's make something amazing together.</p>
-    </BottomNavigation>
+    <FlexContainer>
+      <div>
+        <ImageContainer>
+          <img src="/images/turtle-logo.png" alt="Turtle" width="100%" />
+        </ImageContainer>
+        {CONTACT.map((contact) => (
+          <>
+            <LogoContainer>
+              <img src={`/images/${contact.icon}`} alt={contact.icon} width="100%" />
+            </LogoContainer>
+            <SmallText>{contact.text}</SmallText>
+          </>
+        ))}
+      </div>
+      <PinkSubHeader>Let's make something amazing together.</PinkSubHeader>
+    </FlexContainer>
   );
 }
 
 export default Footer;
+
+export const FlexContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  padding: 100px 0px;
+  width: 90%;
+  border-top: 1px solid white;
+  margin: 50px auto;
+`;
+export const ImageContainer = styled.div`
+width: 100px;
+padding: 20px 100px;
+`
+export const LogoContainer = styled.div`
+width: 20px;
+`

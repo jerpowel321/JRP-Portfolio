@@ -39,3 +39,53 @@ export const EDUCATION = [
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et",
   },
 ];
+
+export const VALUES = [
+  {
+    icon: "fa-balance-scale",
+    label: "Integrity",
+    description:
+      "Have a demonstrated track record of outstanding service; a calm, dependable professional who devotes every effort to achieving the best results.",
+  },
+  {
+    icon: "fa-seedling",
+    label: "Growth",
+    description:
+      "Always looking to continuously learn and develop my core skills while challenging myself to learn new technologies and development techniques.",
+  },
+  {
+    icon: "fa-hands-helping",
+    label: "Teamwork",
+    description:
+      "I believe we win as a team. I'm a team player who always wants to lend a helping hand and share knowledge.",
+  },
+];
+
+export const CONTACT = [
+  {
+    icon: 'location.png',
+    text: 'San Francisco, CA'
+  },
+  {
+    icon: 'cell.png',
+    text: '415-312-6003'
+  },
+  {
+    icon:'email.png',
+    text: 'jerpowel321@gmail.com'
+  },
+  {
+    icon: 'web.png',
+    text: 'jennifer-powell.com'
+  },
+  {
+    icon: 'linkedin.png',
+    text: 'linkedin.com/in/jenniferrpowell',
+    link: 'https://www.linkedin.com/in/jenniferrpowell/'
+  },
+  {
+    icon: 'github.png',
+    text: 'Github.com/jerpowel321',
+    link: 'https://github.com/jerpowel321'
+  }
+]

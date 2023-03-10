@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import 'typeface-roboto';
 import styled from "styled-components";
+import Card from "./Cards";
 
 import {
   Header,
@@ -10,7 +11,7 @@ import {
   SubHeader,
   SmallText,
 } from "../styles/global-styles";
-import {ACCOMPLISHMENTS, EDUCATION } from "../utils/constants.js"
+import {ACCOMPLISHMENTS, EDUCATION, VALUES } from "../utils/constants.js"
 class About extends Component {
   render() {
     return (
@@ -34,6 +35,19 @@ class About extends Component {
               relations,Resource Alignment, Consulting and Compliance.
             </Text>
           </Column>
+        </Container>
+        <i className=" fa-2x far fa-gem" style={{ paddingRight: "3px" }}></i>
+        <h1 className="ib" align="center">
+          <a id="values">Values</a>
+        </h1>
+        <Container>
+          {VALUES.map((value) => (
+            <Card
+              icon={`fas fa-4x ${value.icon}`}
+              label={value.label}
+              description={value.description}
+            />
+          ))}
         </Container>
         <Container>
           <Column>
