@@ -35,7 +35,7 @@ class About extends Component {
           </Container>
         </ValuesContainer>
 
-        <Container>
+        <EducationContainer>
           <Column>
             <SecondaryHeader>Accomplishments</SecondaryHeader>
             {ACCOMPLISHMENTS.map((accomplishment) => (
@@ -44,6 +44,7 @@ class About extends Component {
                   <img
                     src={`/images/${accomplishment.icon}.png`}
                     alt={accomplishment.name}
+                    width="100%"
                   />
                 </ImageContainer>
                 <div>
@@ -62,7 +63,7 @@ class About extends Component {
               </div>
             ))}
           </Column>
-        </Container>
+        </EducationContainer>
       </>
     );
 	}
@@ -74,17 +75,26 @@ const Container = styled.div`
   display: flex;
   align-items: ${(props) => (props.center ? "center" : "flex-start")};
   padding: 40px 0px;
-  /* justify-content: space-between; */
   flex-wrap: wrap;
   justify-content: center;
-
   @media (max-width: ${breakpoints.s}px) {
     padding: 20px 0px;
   }
 `;
 
+export const EducationContainer = styled(Container)`
+  @media (max-width: ${breakpoints.l}px) {
+    flex-direction: column;
+    text-align: center;
+  }
+`;
+
 const Column = styled.div`
-width: 50%;`
+  width: 50%;
+  @media (max-width: ${breakpoints.l}px) {
+    width: 100%;
+  }
+`;
 
 const Flexbox = styled.div`
   display: flex;
@@ -94,9 +104,12 @@ const Flexbox = styled.div`
 `;
 
 const ImageContainer = styled.div`
-width: 100px;
-margin-right: 40px;
-`
+  min-width: 100px;
+  /* margin-right: 40px; */
+  @media (max-width: ${breakpoints.l}px) {
+    /* width: 50px; */
+  }
+`;
 const ValuesContainer = styled.div`
 text-align: center;
 `

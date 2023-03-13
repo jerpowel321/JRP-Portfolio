@@ -49,8 +49,8 @@ export const FlexContainer = styled.div`
   width: 90%;
   border-top: 1px solid white;
   margin: 50px auto;
-  @media (max-width: ${breakpoints.s}px) {
-    flex-direction: column;
+  @media (max-width: ${breakpoints.m}px) {
+    flex-direction: column-reverse;
     text-align: center;
     justify-content: space-around;
   }
@@ -58,6 +58,9 @@ export const FlexContainer = styled.div`
 export const ImageContainer = styled.div`
   width: 100px;
   padding: 0px 100px 30px;
+  @media (max-width: ${breakpoints.m}px) {
+  display: none;
+  }
 `;
 export const LogoContainer = styled.div`
 width: 25px;
@@ -67,7 +70,13 @@ export const ContactItem = styled.div`
   display: flex;
   align-items: center;
   padding: 4px 0px;
+  @media (max-width: ${breakpoints.m}px) {
+    justify-content: center;
+  }
 `;
 
 export const TextContainer = styled.div`
+  @media (max-width: ${breakpoints.m}px) {
+    padding: 20px 0px;
+  }
 `;

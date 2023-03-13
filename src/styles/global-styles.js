@@ -27,6 +27,7 @@ button,
 select,
 a {
   -webkit-tap-highlight-color: rgba(0,0,0,0);
+  text-decoration: none !important;
 }
 `;
 
@@ -95,7 +96,8 @@ export const SubHeader = styled.p`
 export const PinkSubHeader = styled.p`
   font-family: "Open Sans";
   font-size: 35px;
-  color: #fa6591;
+  /* color: #fa6591; */
+  color: #F22276;
   font-weight: 600;
   margin: 0px;
 `;
