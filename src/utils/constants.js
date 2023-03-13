@@ -75,7 +75,7 @@ export const CONTACT = [
     text: 'jerpowel321@gmail.com'
   },
   {
-    icon: 'web.png',
+    icon: 'globe.png',
     text: 'jennifer-powell.com'
   },
   {

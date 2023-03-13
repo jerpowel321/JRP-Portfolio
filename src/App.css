@@ -266,3 +266,8 @@ body {
   visibility: visible;
   opacity: 1;
 }
+
+.anchor {
+  margin-top: -200px;
+  margin-bottom: 200px;
+}

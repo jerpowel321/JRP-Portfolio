@@ -11,9 +11,6 @@ export const GlobalStyles = createGlobalStyle`
     color: white;
     font-family: 'Roboto';
     font-size: 30px;
-    /* font-size: 16px;
-    font-weight: 300;
-    line-height: 1.625; */
   }
   h1,
   h2,
@@ -39,14 +36,32 @@ export const breakpoints = {
   m: 800,
   l: 1000,
   xl: 1200,
+  xxl: 1500,
 };
 
 export const Header = styled.h1`
   font-family: "Roboto";
   line-height: 100px;
-  font-size: 100px;
+  font-size: 95px;
   color: white;
   margin: 0px;
+  @media (max-width: ${breakpoints.xxl}px) {
+    font-size: 90px;
+    line-height: 80px;
+    font-size: 70px;
+  }
+  @media (max-width: ${breakpoints.xl}px) {
+    line-height: 80px;
+    font-size: 70px;
+  }
+  @media (max-width: ${breakpoints.l}px) {
+    line-height: 80px;
+    font-size: 60px;
+  }
+  @media (max-width: ${breakpoints.s}px) {
+    line-height: 1.2;
+    font-size: 30px;
+  }
 `;
 
 export const SecondaryHeader = styled.h4`
@@ -74,14 +89,45 @@ export const PinkSubHeader = styled.p`
 export const Text = styled.p`
   font-family: "Roboto";
   font-size: 30px;
-  width: 700px;
   color: white;
   font-weight: 400;
+  @media (max-width: ${breakpoints.xl}px) {
+    line-height: 1.2;
+    font-size: 24px;
+  }
+  @media (max-width: ${breakpoints.s}px) {
+    line-height: 1.2;
+    font-size: 16px;
+  }
 `;
 
 export const SmallText = styled.p`
   font-family: "Open Sans";
-  font-size: 26px;
-  color: #FFF5FD;
+  font-size: 22px;
+  color: #fff5fd;
   margin: 0px;
+  @media (max-width: ${breakpoints.m}px) {
+    line-height: 1.2;
+    font-size: 16px;
+  }
+`;
+
+export const TwoColumnFlexContainer = styled.div`
+  display: flex;
+  align-items: center;
+  padding: 10px 0px;
+  justify-content: space-between;
+  > div {
+    width: 50%;
+  }
+  @media (max-width: ${breakpoints.l}px) {
+    flex-direction: column-reverse;
+     > div {
+      width: 100%;
+    }
+  }
+`;
+
+export const CenterContainer = styled.div`
+  text-align: center;
 `;

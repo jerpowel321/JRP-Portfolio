@@ -6,7 +6,7 @@ import Hero from "../components/Hero";
 import About from "../components/About";
 import Skills from "../components/Skills";
 import Experience from "../components/Experience";
-import { Header } from "../styles/global-styles";
+import { Header, CenterContainer } from "../styles/global-styles";
 import styled from "styled-components";
 
 class Portfolio extends Component {
@@ -21,9 +21,9 @@ class Portfolio extends Component {
         <Skills />
         <Container>
           <Experience />
-          <Container>
-            <Header>Old Projects</Header>
-          </Container>
+          <CenterContainer>
+            <Header>Projects</Header>
+          </CenterContainer>
           <ProjectSlider />
         </Container>
         <Footer />

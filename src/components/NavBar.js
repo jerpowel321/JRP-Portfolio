@@ -3,25 +3,11 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Grid from '@material-ui/core/Grid'
 import grey from '@material-ui/core/colors/grey';
+import styled from "styled-components";
+import { breakpoints} from "../styles/global-styles";
 
 const white = grey[50];
-
 export default class NavBar extends React.Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			menuOpen: false
-		};
-  }
-  
-  menuClick = () => {
-    const {menuOpen} = this.state
-			this.setState({
-        menuOpen: !menuOpen,
-      });
-  }
-
-
   render() {
     const Links = [
       {
@@ -29,24 +15,20 @@ export default class NavBar extends React.Component {
         text: "Home",
       },
       {
-        link: "/#about",
-        text: "About",
-      },
-      {
-        link: "/#skills",
-        text: "Skills",
+        link: "/#values",
+        text: "Values",
       },
       {
         link: "/#experience",
         text: "Experience",
       },
       {
-        link: "/#projects",
-        text: "Products",
+        link: "/#skills",
+        text: "Skills",
       },
       {
-        link: "/#contact",
-        text: "Contact",
+        link: "/#projects",
+        text: "Projects",
       },
     ];
 		return (
@@ -68,7 +50,7 @@ export default class NavBar extends React.Component {
                     width="60px"
                   />
                 </div>
-                <div style={{ display: 'flex', justifyContent: 'center'}}>
+                <LinkContainer>
                   {Links.map((link)=> 
                 <Grid item style={{ paddingRight: "20px", color: white }}>
                     <a
@@ -80,7 +62,7 @@ export default class NavBar extends React.Component {
                     </a>
                   </Grid>
                   )}
-                </div>
+                </LinkContainer>
               </Grid>
             </Grid>
             <Grid item xs={4}>
@@ -124,13 +106,6 @@ export default class NavBar extends React.Component {
                     ></i>
                   </a>
                 </Grid>
-                <a id="menu">
-                  <i
-                    className="fas fa-2x fa-bars"
-                    style={{ color: white, cursor: "pointer" }}
-                    onClick={this.menuClick}
-                  ></i>
-                </a>
               </Grid>
             </Grid>
           </Grid>
@@ -141,3 +116,10 @@ export default class NavBar extends React.Component {
 };
 
 
+export const LinkContainer = styled.div`
+  display: flex;
+  justifycontent: "center";
+  @media (max-width: ${breakpoints.m}px) {
+  display: none;
+  }
+`;
