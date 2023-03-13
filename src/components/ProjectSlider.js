@@ -45,15 +45,8 @@ function PrevArrow(props) {
   );
 }
 const settings = {
-  dots: true,
-  infinite: true,
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  autoplay: true,
-  autoplaySpeed: 2000,
-  nextArrow: <NextArrow />,
-  prevArrow: <PrevArrow />,
-};
+ 
+  }
 class ProjectSlider extends Component {
 	constructor() {
 		super();
@@ -116,7 +109,31 @@ class ProjectSlider extends Component {
           />
         </Helmet>
         {this.state.projects ? (
-          <Slider {...settings}>
+          <Slider
+            dots
+            infinite
+            slidesToShow={3}
+            slidesToScroll={1}
+            autoplay
+            autoplaySpeed={2000}
+            // nextArrow={<NextArrow />}
+            // prevArrow={<PrevArrow />}
+            responsive={[
+              {
+                breakpoint: 1200,
+                settings: {
+                  slidesToShow: 2,
+                },
+              },
+              {
+                breakpoint: 1000,
+                settings: {
+                  slidesToShow: 1,
+                  autoplaySpeed: 1500
+                },
+              },
+            ]}
+          >
             {this.state.projects.map((project) => (
               <div key={project.fields.name} item>
                 <Project project={project} onClick={this.onClick.bind(this)} />

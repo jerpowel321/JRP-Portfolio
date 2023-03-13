@@ -10,7 +10,6 @@ export const GlobalStyles = createGlobalStyle`
     overscroll-behavior: none;
     color: white;
     font-family: 'Roboto';
-    font-size: 30px;
   }
   h1,
   h2,
@@ -69,6 +68,21 @@ export const SecondaryHeader = styled.h4`
   font-size: 40px;
   color: #fff5fd;
   font-weight: 600;
+  margin: 20px 0px;
+  @media (max-width: ${breakpoints.xxl}px) {
+    font-size: 38px;
+  }
+  @media (max-width: ${breakpoints.xl}px) {
+    font-size: 34px;
+  }
+  @media (max-width: ${breakpoints.m}px) {
+    font-size: 30px;
+  }
+  @media (max-width: ${breakpoints.s}px) {
+    line-height: 1.2;
+    font-size: 24px;
+    margin: 10px 0px;
+  }
 `;
 
 export const SubHeader = styled.p`
@@ -88,7 +102,7 @@ export const PinkSubHeader = styled.p`
 
 export const Text = styled.p`
   font-family: "Roboto";
-  font-size: 30px;
+  font-size: 28px;
   color: white;
   font-weight: 400;
   @media (max-width: ${breakpoints.xl}px) {

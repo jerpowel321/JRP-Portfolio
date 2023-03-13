@@ -40,14 +40,6 @@ i:hover {
   display: inline-block;
 }
 
-#nav a {
-  text-decoration: none;
-  /* padding-bottom: 7px; */
-}
-#navigation a:hover {
-  border-bottom: 3px solid #fafafa;
-}
-
 /* Grow */
 .hvr-grow {
   display: inline-block;
@@ -270,4 +262,11 @@ body {
 .anchor {
   margin-top: -200px;
   margin-bottom: 200px;
+}
+
+#logo {
+  width: 60px;
+  @media (max-width: 600px) {
+    width: 40px;
+  }
 }

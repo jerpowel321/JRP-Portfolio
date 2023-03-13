@@ -9,6 +9,7 @@ import {
   SecondaryHeader,
   SubHeader,
   SmallText,
+  breakpoints
 } from "../styles/global-styles";
 import {ACCOMPLISHMENTS, EDUCATION, VALUES } from "../utils/constants.js"
 class About extends Component {
@@ -16,25 +17,20 @@ class About extends Component {
     return (
       <>
         <ValuesContainer>
-          <Header align="center">
-            <a id="values" className='anchor'>My Values</a>
-          </Header>
+          <ValuesHeader>Values</ValuesHeader>
           <Container>
             {VALUES.map((value) => (
-              <div>
+              <Card>
                 <i
                   align="center"
                   style={{
                     color: "#F22276",
-                    paddingRight: "5px",
-                    paddingBottom: "20px",
-                    display: "block",
                   }}
                   className={`fas fa-4x ${value.icon}`}
                 ></i>
                 <SecondaryHeader>{value.label}</SecondaryHeader>
-                <ValueText>{value.description}</ValueText>
-              </div>
+                <SmallText>{value.description}</SmallText>
+              </Card>
             ))}
           </Container>
         </ValuesContainer>
@@ -77,6 +73,14 @@ export default About
 const Container = styled.div`
   display: flex;
   align-items: ${(props) => (props.center ? "center" : "flex-start")};
+  padding: 40px 0px;
+  /* justify-content: space-between; */
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @media (max-width: ${breakpoints.s}px) {
+    padding: 20px 0px;
+  }
 `;
 
 const Column = styled.div`
@@ -96,5 +100,18 @@ margin-right: 40px;
 const ValuesContainer = styled.div`
 text-align: center;
 `
-const ValueText = styled(SmallText)`
-padding: 20px;`
+
+const Card = styled.div`
+  width: 30%;
+  min-width: 380px;
+  margin: 20px 60px;
+  @media (max-width: ${breakpoints.s}px) {
+    min-width: 100%;
+  }
+`;
+
+const ValuesHeader = styled(Header)`
+text-align: center;
+margin: 50px 0px 20px;
+
+`

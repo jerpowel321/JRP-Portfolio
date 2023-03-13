@@ -10,8 +10,8 @@ class Skills extends Component {
   render() {
     return (
       <Container id="skills">
-        <Header>My Skills</Header>
-        <img src="/images/word-cloud.png" alt="Me" width="100%" />
+        <Header>Skills</Header>
+        <img src="/images/word-cloud.png" alt="Word cloud of soft and hard skills" width="100%" />
       </Container>
     );
   }

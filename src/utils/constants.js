@@ -63,12 +63,9 @@ export const VALUES = [
 
 export const CONTACT = [
   {
-    icon: 'location.png',
-    text: 'San Francisco, CA'
-  },
-  {
     icon: 'globe.png',
-    text: 'jennifer-powell.com'
+    text: 'jennifer-powell.com',
+    link: 'https://www.jennifer-powell.com/'
   },
   {
     icon: 'linkedin.png',

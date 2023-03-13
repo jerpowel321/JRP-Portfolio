@@ -9,6 +9,28 @@ import { breakpoints} from "../styles/global-styles";
 const white = grey[50];
 export default class NavBar extends React.Component {
   render() {
+    const Links = [
+      {
+        link: "/",
+        text: "Home",
+      },
+      {
+        link: "/#values",
+        text: "Values",
+      },
+      {
+        link: "/#experience",
+        text: "Experience",
+      },
+      {
+        link: "/#skills",
+        text: "Skills",
+      },
+      {
+        link: "/#projects",
+        text: "Projects",
+      },
+    ];
 		return (
       <AppBar id="nav" style={{ backgroundColor: "transparent" }} position="sticky">
         <Toolbar>
@@ -21,11 +43,11 @@ export default class NavBar extends React.Component {
                 alignItems="center"
                 style={{ fontWeight: "bold" }}
               >
-                <div id="name">
+                <div >
                   <img
+                  id="logo"
                     src="/images/turtle-logo.png"
                     alt="Turtle"
-                    width="60px"
                   />
                 </div>
               </Grid>
@@ -79,3 +101,12 @@ export default class NavBar extends React.Component {
     );
 	}
 };
+
+
+export const LinkContainer = styled.div`
+  display: flex;
+  justifycontent: "center";
+  @media (max-width: ${breakpoints.l}px) {
+ display:
+  }
+`;
