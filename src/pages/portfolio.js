@@ -21,9 +21,6 @@ class Portfolio extends Component {
         <Skills />
         <Container>
           <Experience />
-          <CenterContainer>
-            <Header>Projects</Header>
-          </CenterContainer>
           <ProjectSlider />
         </Container>
         <Footer />

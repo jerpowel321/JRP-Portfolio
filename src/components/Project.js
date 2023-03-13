@@ -6,7 +6,6 @@ import CardMedia from '@material-ui/core/CardMedia'
 import Typography from '@material-ui/core/Typography'
 import Grid from '@material-ui/core/Grid';
 
-
 const Project = (props) => {
   const { name, images, description, skills, githubLink } =
     props.project.fields

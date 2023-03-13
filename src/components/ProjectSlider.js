@@ -3,15 +3,16 @@ import Project from './Project'
 import { createClient } from "contentful";
 import Slider from "react-slick";
 import { Helmet } from "react-helmet";
-
-
-const SPACE_ID = 'vhqqfqor19w8';
-const ACCESS_TOKEN = 'M_1QrEX-9hG9P5CL65RKxRmqQRIgyaU2KXtmFHEDFIc';
+import {
+  Header,
+  CenterContainer,
+} from "../styles/global-styles";
+import styled from "styled-components";
 
 // Initiate the connection to the backend
 const client = createClient({
-	space: SPACE_ID,
-	accessToken: ACCESS_TOKEN
+  space: process.env.SPACE_ID,
+  accessToken: process.env.ACCESS_TOKEN,
 });
 
 function NextArrow(props) {
@@ -108,44 +109,56 @@ class ProjectSlider extends Component {
             href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
           />
         </Helmet>
-        {this.state.projects ? (
-          <Slider
-            dots
-            infinite
-            slidesToShow={3}
-            slidesToScroll={1}
-            autoplay
-            autoplaySpeed={2000}
-            // nextArrow={<NextArrow />}
-            // prevArrow={<PrevArrow />}
-            responsive={[
-              {
-                breakpoint: 1200,
-                settings: {
-                  slidesToShow: 2,
+        <CenterContainer>
+          <Header>Projects</Header>
+        </CenterContainer>
+        <SliderContainer>
+          {this.state.projects ? (
+            <Slider
+              dots
+              infinite
+              slidesToShow={3}
+              slidesToScroll={1}
+              autoplay
+              autoplaySpeed={2000}
+              // nextArrow={<NextArrow />}
+              // prevArrow={<PrevArrow />}
+              responsive={[
+                {
+                  breakpoint: 1200,
+                  settings: {
+                    slidesToShow: 2,
+                  },
                 },
-              },
-              {
-                breakpoint: 1000,
-                settings: {
-                  slidesToShow: 1,
-                  autoplaySpeed: 1500
+                {
+                  breakpoint: 1000,
+                  settings: {
+                    slidesToShow: 1,
+                    autoplaySpeed: 1500,
+                  },
                 },
-              },
-            ]}
-          >
-            {this.state.projects.map((project) => (
-              <div key={project.fields.name} item>
-                <Project project={project} onClick={this.onClick.bind(this)} />
-              </div>
-            ))}
-          </Slider>
-        ) : (
-          <p>"No project found"</p>
-        )}
+              ]}
+            >
+              {this.state.projects.map((project) => (
+                <div key={project.fields.name} item>
+                  <Project
+                    project={project}
+                    onClick={this.onClick.bind(this)}
+                  />
+                </div>
+              ))}
+            </Slider>
+          ) : (
+            <p>"No project found"</p>
+          )}
+        </SliderContainer>
       </div>
     );
 	}
 }
 
 export default ProjectSlider
+
+const SliderContainer = styled.div`
+padding: 20px 0px;
+`
