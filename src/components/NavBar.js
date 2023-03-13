@@ -9,28 +9,6 @@ import { breakpoints} from "../styles/global-styles";
 const white = grey[50];
 export default class NavBar extends React.Component {
   render() {
-    const Links = [
-      {
-        link: "/",
-        text: "Home",
-      },
-      {
-        link: "/#values",
-        text: "Values",
-      },
-      {
-        link: "/#experience",
-        text: "Experience",
-      },
-      {
-        link: "/#skills",
-        text: "Skills",
-      },
-      {
-        link: "/#projects",
-        text: "Projects",
-      },
-    ];
 		return (
       <AppBar id="nav" style={{ backgroundColor: "transparent" }} position="sticky">
         <Toolbar>
@@ -43,26 +21,13 @@ export default class NavBar extends React.Component {
                 alignItems="center"
                 style={{ fontWeight: "bold" }}
               >
-                <div id="name" style={{ marginRight: "20px" }}>
+                <div id="name">
                   <img
                     src="/images/turtle-logo.png"
                     alt="Turtle"
                     width="60px"
                   />
                 </div>
-                <LinkContainer>
-                  {Links.map((link)=> 
-                <Grid item style={{ paddingRight: "20px", color: white }}>
-                    <a
-                      style={{ color: white }}
-                      href={link.link}
-                      rel="noopener noreferrer"
-                    >
-                      {link.text}
-                    </a>
-                  </Grid>
-                  )}
-                </LinkContainer>
               </Grid>
             </Grid>
             <Grid item xs={4}>
@@ -114,12 +79,3 @@ export default class NavBar extends React.Component {
     );
 	}
 };
-
-
-export const LinkContainer = styled.div`
-  display: flex;
-  justifycontent: "center";
-  @media (max-width: ${breakpoints.m}px) {
-  display: none;
-  }
-`;

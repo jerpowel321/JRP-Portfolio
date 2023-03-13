@@ -67,14 +67,6 @@ export const CONTACT = [
     text: 'San Francisco, CA'
   },
   {
-    icon: 'cell.png',
-    text: '415-312-6003'
-  },
-  {
-    icon:'email.png',
-    text: 'jerpowel321@gmail.com'
-  },
-  {
     icon: 'globe.png',
     text: 'jennifer-powell.com'
   },

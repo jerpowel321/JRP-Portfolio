@@ -57,7 +57,7 @@ export const CtaContainer = styled.div`
   }
   @media (max-width: ${breakpoints.s}px) {
     img {
-      width: 120px;
+      width: 140px;
     }
   }
 `;
