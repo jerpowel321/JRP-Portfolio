@@ -11,8 +11,8 @@ import styled from "styled-components";
 
 // Initiate the connection to the backend
 const client = createClient({
-  space: process.env.SPACE_ID,
-  accessToken: process.env.ACCESS_TOKEN,
+  space: process.env.REACT_APP_SPACE_ID,
+  accessToken: process.env.REACT_APP_ACCESS_TOKEN,
 });
 
 function NextArrow(props) {
