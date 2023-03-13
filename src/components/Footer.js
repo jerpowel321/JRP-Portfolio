@@ -69,7 +69,7 @@ padding-right: 10px;
 export const ContactItem = styled.div`
   display: flex;
   align-items: center;
-  padding: 4px 0px;
+  padding: 6px 0px;
   @media (max-width: ${breakpoints.m}px) {
     justify-content: center;
   }

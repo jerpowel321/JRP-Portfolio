@@ -91,6 +91,18 @@ export const SubHeader = styled.p`
   font-size: 35px;
   color: #fff5fd;
   margin: 0px;
+  @media (max-width: ${breakpoints.xxl}px) {
+    font-size: 32px;
+  }
+  @media (max-width: ${breakpoints.xl}px) {
+    font-size: 30px;
+  }
+  @media (max-width: ${breakpoints.m}px) {
+    font-size: 24px;
+  }
+  @media (max-width: ${breakpoints.s}px) {
+    font-size: 22px;
+  }
 `;
 
 export const PinkSubHeader = styled.p`

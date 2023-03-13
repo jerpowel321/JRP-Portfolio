@@ -3,39 +3,15 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Grid from '@material-ui/core/Grid'
 import grey from '@material-ui/core/colors/grey';
-import styled from "styled-components";
-import { breakpoints} from "../styles/global-styles";
 
 const white = grey[50];
 export default class NavBar extends React.Component {
   render() {
-    const Links = [
-      {
-        link: "/",
-        text: "Home",
-      },
-      {
-        link: "/#values",
-        text: "Values",
-      },
-      {
-        link: "/#experience",
-        text: "Experience",
-      },
-      {
-        link: "/#skills",
-        text: "Skills",
-      },
-      {
-        link: "/#projects",
-        text: "Projects",
-      },
-    ];
 		return (
       <AppBar id="nav" style={{ backgroundColor: "transparent" }} position="sticky">
         <Toolbar>
           <Grid container>
-            <Grid item xs={8} style={{ alignSelf: "center" }}>
+            <Grid item xs={4} style={{ alignSelf: "center" }}>
               <Grid
                 id="navigation"
                 container
@@ -52,7 +28,7 @@ export default class NavBar extends React.Component {
                 </div>
               </Grid>
             </Grid>
-            <Grid item xs={4}>
+            <Grid item xs={8}>
               <Grid
                 container
                 justify="flex-end"
@@ -101,12 +77,3 @@ export default class NavBar extends React.Component {
     );
 	}
 };
-
-
-export const LinkContainer = styled.div`
-  display: flex;
-  justifycontent: "center";
-  @media (max-width: ${breakpoints.l}px) {
- display:
-  }
-`;

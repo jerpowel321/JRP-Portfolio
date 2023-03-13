@@ -57,10 +57,10 @@ class About extends Component {
           <Column>
             <SecondaryHeader>Education</SecondaryHeader>
             {EDUCATION.map((school) => (
-              <div>
+              <ListItem>
                 <PinkSubHeader>{school.name}</PinkSubHeader>
                 <SmallText>{school.detail}</SmallText>
-              </div>
+              </ListItem>
             ))}
           </Column>
         </EducationContainer>
@@ -101,11 +101,18 @@ const Flexbox = styled.div`
   justify-content: space=between;
   padding: 20px 0px;
   width: 85%;
+  @media (max-width: ${breakpoints.m}px) {
+    width: 100%;
+    flex-direction: column;
+    img {
+      width: 60px;
+    }
+  }
 `;
 
 const ImageContainer = styled.div`
   min-width: 100px;
-  /* margin-right: 40px; */
+  margin-right: 40px;
   @media (max-width: ${breakpoints.l}px) {
     /* width: 50px; */
   }
@@ -126,5 +133,7 @@ const Card = styled.div`
 const ValuesHeader = styled(Header)`
 text-align: center;
 margin: 50px 0px 20px;
-
 `
+
+export const ListItem = styled.div`
+padding 10px 0px`
