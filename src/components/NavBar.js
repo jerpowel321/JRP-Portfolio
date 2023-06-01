@@ -57,17 +57,17 @@ export default class NavBar extends React.Component {
                       style={{ color: white, paddingRight: "12px" }}
                     ></i>
                   </a>
-                  <a
-                    href="/images/JenniferPowell_Resume.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hideOnMobile"
-                  >
-                    <i
-                      className="fas fa-file-pdf fa-2x ml hvr-grow nml"
-                      style={{ color: white, paddingRight: "12px" }}
-                    ></i>
-                  </a>
+//                   <a
+//                     href="/images/JenniferPowell_Resume.pdf"
+//                     target="_blank"
+//                     rel="noopener noreferrer"
+//                     className="hideOnMobile"
+//                   >
+//                     <i
+//                       className="fas fa-file-pdf fa-2x ml hvr-grow nml"
+//                       style={{ color: white, paddingRight: "12px" }}
+//                     ></i>
+//                   </a>
                 </Grid>
               </Grid>
             </Grid>
