@@ -20,7 +20,7 @@ class Portfolio extends Component {
         </Container>
         <Skills />
         <Container>
-          <Experience />
+//           <Experience />
           <ProjectSlider />
         </Container>
         <Footer />
